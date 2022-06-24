@@ -1,38 +1,150 @@
 .App {
+  font-family: Cambria, Cochin, Georgia, "Times", Times New Roman, serif;
+  text-align: left;
+}
+
+h2 {
+  font-size: 50px;
+  color: #0e5870;
+  padding: 15px;
+}
+li.first-letter {
+  text-transform: capitalize;
+}
+.page-title {
+  padding: 20px;
+  margin: 15px 110px auto;
+  max-width: 850px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+  color: rgb(2, 2, 33);
   text-align: center;
+  font-weight: 800;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-app {
+  max-width: 850px;
+  margin: 15px auto;
+  padding: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.city-input {
+  border-color: aquamarine;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.curWeather {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 20px;
+  background-color: #bbe4e9;
+  border: 2px solid #84d9f3;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
 }
-
-.App-link {
-  color: #61dafb;
+.cur-date {
+  list-style: none;
+  font-size: 25px;
+  font-weight: 250;
+  line-height: 30px;
+  color: #156579;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.w-desc {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 15 0;
+  line-height: 25px;
+  text-transform: capitalize;
+}
+.w-details {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 25px;
+  margin-top: 20px;
+  color: #0e5870;
+}
+.weather-app-wrap {
+  padding: 10px;
+  position: cover;
+}
+.weather-img img {
+  margin-right: 30px;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  bottom: 25px;
+}
+.weather-img strong {
+  font-size: 70px;
+  font-weight: 350;
+}
+.weather-img small {
+  font-size: 20px;
+  position: relative;
+  top: -32px;
+}
+.temp-summary {
+  list-style: none;
+  display: inline-flex;
+  font-size: 17px;
+  font-weight: 200;
+  line-height: 25px;
+  text-decoration: none;
+  color: #0e5870;
+}
+.daily-forecast {
+  padding: 20px;
+  margin: auto 15px;
+  max-width: 850px;
+  align-content: center;
+}
+.daily-weather {
+  text-align: center;
+  padding: 20px;
+  margin: auto 5px;
+  line-height: 30px;
+  color: #0c0c0c;
+  border: 2px solid #84d9f3;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: aliceblue;
+}
+.daily-forecast-day {
+  font-size: 17px;
+  column-width: auto;
+}
+.daily-forecast-temp {
+  font-size: 14px;
+}
+.daily-forecast-temp-min {
+  color: #a49f9f;
+}
+.forecast-name {
+  margin-left: 5px;
+  padding: 25px;
+  font-size: 25px;
+  color: #0e5870;
+}
+.forecast {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 20px;
+  border: 2px solid #84d9f3;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px #84d9f3 rgba(0, 0, 0, 0.5);
+  background-color: #bbe4e9;
+}
+.subTitle {
+  font-style: italic;
+  font-weight: 900px;
+}
+.footer {
+  max-width: 375px;
+  margin: 25px auto;
+  padding: 20px;
+  text-align: center;
+  border: 3px dotted #84d9f3;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px #84d9f3 rgba(0, 0, 0, 0.5);
+  background-color: aliceblue;
+}
+.author {
+  color: rgb(51, 10, 163);
 }

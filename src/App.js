@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import CurrentWeather from "./CurrentWeather";
+import Footer from "./Footer";
+import Forecast from "./Forecast";
+import Search from "./Search";
+import Background from "./Images/coffee-and-donuts-pop-color-background.png";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        backgroundImage: `url(${Background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+      className="weather-app-wrap background"
+    >
+      <h1 className="page-title">
+        The Weather Be Like...
+        <span role="img" aria-label="Thinking Face">
+          🤔
+        </span>
+      </h1>
+
+      <Search />
+      <CurrentWeather />
+      <Forecast />
+      <Footer />
     </div>
   );
 }
-
-export default App;
