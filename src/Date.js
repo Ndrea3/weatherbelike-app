@@ -10,11 +10,13 @@ export default function DateTime() {
   });
 
   return (
-    <div>
-      <p>
-        {" "}
-        Date/Time: {date.toLocaleDateString()}, {date.toLocaleTimeString()}
-      </p>
+    <div className="curWeather">
+      <ul>
+        <li className="cur-date" id="date">
+          {" "}
+          Date/Time: {date.toLocaleDateString()}, {date.toLocaleTimeString()}
+        </li>
+      </ul>
     </div>
   );
 }
