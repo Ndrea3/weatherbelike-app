@@ -1,4 +1,4 @@
-import DateTime from "./Date";
+import DateTime from "./DateTime";
 
 export default function CurrentWeather() {
     <div className="curWeather">
