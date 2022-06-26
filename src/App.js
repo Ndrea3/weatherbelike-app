@@ -22,8 +22,11 @@ export default function App() {
           🤔
         </span>
       </h1>
-
+      <br />
+      <Date /> 
+      <br/>
       <Search />
+      <br/>
       <CurrentWeather />
       <Forecast />
       <Footer />
