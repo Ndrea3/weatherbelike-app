@@ -1,3 +1,5 @@
+import DateTime from "./Date";
+
 export default function CurrentWeather() {
     <div className="curWeather">
       <h2 className="place mt-3" id="city">
@@ -5,7 +7,7 @@ export default function CurrentWeather() {
       </h2>
       <ul>
         <li className="cur-date" id="date">
-        <Date />
+        <DateTime />
         </li>
         <li className="w-desc" id="desc">
           Sunny
