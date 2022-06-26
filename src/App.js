@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Forecast from "./Forecast";
 import Search from "./Search";
 import Background from "./Images/coffee-and-donuts-pop-color-background.png";
+import DateTime from "./Date";
 
 export default function App() {
   return (
