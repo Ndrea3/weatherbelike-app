@@ -24,7 +24,7 @@ export default function App() {
         </span>
       </h1>
       <br />
-      <Date /> 
+      <DateTime /> 
       <br/>
       <Search />
       <br/>
