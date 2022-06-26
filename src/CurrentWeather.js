@@ -1,4 +1,4 @@
-import DateTime from "./DateTime";
+
 
 export default function CurrentWeather() {
     <div className="curWeather">
@@ -7,7 +7,7 @@ export default function CurrentWeather() {
       </h2>
       <ul>
         <li className="cur-date" id="date">
-        <DateTime />
+        Today
         </li>
         <li className="w-desc" id="desc">
           Sunny
