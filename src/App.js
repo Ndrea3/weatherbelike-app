@@ -24,10 +24,10 @@ export default function App() {
         </span>
       </h1>
       <br />
-      <DateTime /> 
-      <br/>
       <Search />
       <br/>
+      <DateTime />
+      <br />
       <CurrentWeather />
       <Forecast />
       <Footer />

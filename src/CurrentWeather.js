@@ -1,12 +1,11 @@
 export default function CurrentWeather() {
-  return (
     <div className="curWeather">
       <h2 className="place mt-3" id="city">
         Frankford, ON
       </h2>
       <ul>
         <li className="cur-date" id="date">
-          June 6, 2022 @ 10:40 AM
+        <Date />
         </li>
         <li className="w-desc" id="desc">
           Sunny
@@ -58,5 +57,6 @@ export default function CurrentWeather() {
         </ul>
       </div>
     </div>
-  );
+  ;
 }
+
