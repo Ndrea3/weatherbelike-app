@@ -25,6 +25,8 @@ export default function App() {
       </h1>
       <br />
       <Search />
+      <br/>
+      <DateTime />
       <br />
       <CurrentWeather />
       <Forecast />
