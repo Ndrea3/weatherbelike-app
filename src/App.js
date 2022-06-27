@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./App.css";
 import React from "react";
 import CurrentWeather from "./CurrentWeather";
 import Footer from "./Footer";
