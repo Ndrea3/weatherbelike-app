@@ -15,7 +15,7 @@ export default function Weather(props) {
   function showTemp(response) {
     setCity(props.city);
     setTemp(Math.round(response.data.main.temp));
-    setDesc(Math.round(response.data.weather[0].description));
+    setDesc(response.data.weather[0].description);
     setIcon(
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
