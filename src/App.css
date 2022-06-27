@@ -30,6 +30,8 @@ li.first-letter {
 }
 .city-input {
   border-color: aquamarine;
+  justify-content: center;
+  align-items: center
 }
 .curWeather {
   max-width: 850px;
