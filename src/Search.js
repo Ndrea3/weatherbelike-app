@@ -7,14 +7,17 @@ export default function WeatherSearch() {
   let [display, setDisplay] = useState(false);
 
   function displayWeather(response) {
-    console.log(response);
     setDisplay(true);
     setDetails({
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      temperature: response.data.main.temp,
-      wind: response.data.wind.speed,
-      humidity: response.data.main.humidity,
-      description: response.data.weather[0].description,
+    temp: response.data.main.temp,
+    description:response.data.weather[0].description,
+    icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+    pressure:response.data.main.pressure,
+    humidity: response.data.main.humidity,
+    wind: response.data.wind.speed,
+    tempHigh: response.data.main.temp_max,
+    tempLow: response.data.main.temp_min,
+    feelsLike: response.data.main.feels_like,
     });
   }
 
@@ -41,27 +44,60 @@ export default function WeatherSearch() {
 
   if (display) {
     return (
-      <div>
-        {form}
-        <h2>{city}</h2>
-        <img src={details.icon} alt={details.description} />
-        <ul className="Details">
-          <li>
-            <strong>Temp</strong>: {Math.round(details.temperature)}°C
+  <div className="curWeather">
+        <h2 className="place mt-3" id="city">
+          {city}
+        </h2>
+        <ul>
+          <li className="cur-date" id="date">
+            June 6, 2022 @ 10:40 AM
           </li>
-          <li>
-            <strong>Description</strong>: {details.description}
-          </li>
-          <li>
-            <strong>Humidity</strong>: {details.humidity}%
-          </li>
-          <li>
-            <strong>Wind</strong>: {details.wind}km/h
+          <li className="w-desc" id="desc">
+            {details.description}
           </li>
         </ul>
-      </div>
-    );
+        <div className="row">
+          <div className="col-6">
+            <div className="clearfix weather-img">
+              <img src={details.icon} alt = {description}/>
+              <strong id="temperature">{details.temp} </strong>
+              <small id="celc-link">°C</small>
+            </div>
+          </div>
+          <div className="col-6">
+            <ul className="w-details">
+              <li>
+                <strong>Pressure: </strong>
+                <span id="pressure">{details.pressure} </span> mmHg
+              </li>
+              <li>
+                <strong>Humidity: </strong>
+                <span id="humidity">{details.humidity} </span>%
+              </li>
+              <li>
+                <strong>Wind:</strong>
+                <span id="wind">{details.wind}</span> km/h
+              </li>
+            </ul>
+          </div>
+          <ul>
+            <li className="temp-summary p-3">
+              <strong>High: </strong>
+              <span id="dailyHigh">{details.tempHigh}</span>
+            </li>
+            <li className="temp-summary p-3">
+              <strong>Low: </strong>
+              <span id="dailyLow">{details.tempLow} </span>
+            </li>
+            <li className="temp-summary p-3">
+              <strong>Feels Like: </strong>
+              <span id="dailyFeelsLike">{details.feelsLike} </span>
+            </li>
+          </ul>
+        </div>
+      </div>);
   } else {
     return form;
   }
 }
+

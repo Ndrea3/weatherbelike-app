@@ -10,7 +10,7 @@ export default function Footer() {
           >
             Open-sourced code
           </a>
-          <span className="author">by Andrea Simmons</span>
+          <span className="author"> by Andrea Simmons</span>
         </strong>
       </small>
     </div>

@@ -13,7 +13,6 @@ export default function Weather(props) {
   let [tempLow, setTempLow] = useState(null);
   let [feelsLike, setFeelsLike] = useState(null);
   function showTemp(response) {
-    console.log(response);
     setCity(props.city);
     setTemp(response.data.main.temp);
     setDesc(response.data.weather[0].description);
@@ -47,7 +46,7 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-6">
             <div className="clearfix weather-img">
-              <image>{icon}</image>
+              <img src={icon} alt = {description}/>
               <strong id="temperature">{temp} </strong>
               <small id="celc-link">°C</small>
             </div>
