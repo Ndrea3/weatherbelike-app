@@ -9,15 +9,15 @@ export default function WeatherSearch() {
   function displayWeather(response) {
     setDisplay(true);
     setDetails({
-    temp: response.data.main.temp,
+    temp:Math.round(response.data.main.temp),
     description:response.data.weather[0].description,
     icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-    pressure:response.data.main.pressure,
-    humidity: response.data.main.humidity,
-    wind: response.data.wind.speed,
-    tempHigh: response.data.main.temp_max,
-    tempLow: response.data.main.temp_min,
-    feelsLike: response.data.main.feels_like,
+    pressure:Math.round(response.data.main.pressure),
+    humidity:Math.round(response.data.main.humidity),
+    wind: Math.round(response.data.wind.speed),
+    tempHigh: Math.round(response.data.main.temp_max),
+    tempLow: Math.round(response.data.main.temp_min),
+    feelsLike: Math.round(response.data.main.feels_like),
     });
   }
 
@@ -60,7 +60,7 @@ export default function WeatherSearch() {
           <div className="col-6">
             <div className="clearfix weather-img">
               <img src={details.icon} alt = {details.description}/>
-              <strong id="temperature">{details.temp} </strong>
+              <strong id="temperature">{details.temp}</strong>
               <small id="celc-link">°C</small>
             </div>
           </div>
