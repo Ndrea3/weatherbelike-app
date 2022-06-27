@@ -7,6 +7,7 @@ h2 {
   font-size: 50px;
   color: #0e5870;
   padding: 15px;
+
 }
 li.first-letter {
   text-transform: capitalize;
@@ -20,6 +21,7 @@ li.first-letter {
   color: rgb(2, 2, 33);
   text-align: center;
   font-weight: 800;
+  align-content: center;
 }
 .weather-app {
   max-width: 850px;
