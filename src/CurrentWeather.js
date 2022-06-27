@@ -21,7 +21,7 @@ export default function Weather(props) {
     );
     setPress(Math.round(response.data.main.pressure));
     setHum(Math.round(response.data.main.humidity));
-    setWind(Math,round(response.data.wind.speed));
+    setWind(Math.round(response.data.wind.speed));
     setTempHigh(Math.round(response.data.main.temp_max));
     setTempLow(Math.round(response.data.main.temp_min));
     setFeelsLike(Math.round(response.data.main.feels_like));
