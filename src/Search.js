@@ -59,7 +59,7 @@ export default function WeatherSearch() {
         <div className="row">
           <div className="col-6">
             <div className="clearfix weather-img">
-              <img src={details.icon} alt = {description}/>
+              <img src={details.icon} alt = {details.description}/>
               <strong id="temperature">{details.temp} </strong>
               <small id="celc-link">°C</small>
             </div>
