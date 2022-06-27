@@ -30,9 +30,6 @@ li.first-letter {
 }
 .city-input {
   border-color: aquamarine;
-  justify-content: center;
-  align-items: center;
-  display: flex;
 }
 .curWeather {
   max-width: 850px;
@@ -152,4 +149,9 @@ li.first-letter {
 }
 .author {
   color: rgb(51, 10, 163);
+}
+.search-form{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }

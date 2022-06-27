@@ -11,6 +11,7 @@ export default function Search() {
               id="city-input"
               autoComplete="off"
             />
+            </div>
           
           <div className="col-3">
             <input
@@ -18,7 +19,6 @@ export default function Search() {
               value="Search"
               className="btn btn-info w-100"
             />
-            </div>
           </div>
         </div>
       </form>
