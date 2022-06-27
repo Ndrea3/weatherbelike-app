@@ -14,17 +14,17 @@ export default function Weather(props) {
   let [feelsLike, setFeelsLike] = useState(null);
   function showTemp(response) {
     setCity(props.city);
-    setTemp(response.data.main.temp);
-    setDesc(response.data.weather[0].description);
+    setTemp(Math.round(response.data.main.temp));
+    setDesc(Math.round(response.data.weather[0].description));
     setIcon(
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
-    setPress(response.data.main.pressure);
-    setHum(response.data.main.humidity);
-    setWind(response.data.wind.speed);
-    setTempHigh(response.data.main.temp_max);
-    setTempLow(response.data.main.temp_min);
-    setFeelsLike(response.data.main.feels_like);
+    setPress(Math.round(response.data.main.pressure));
+    setHum(Math.round(response.data.main.humidity));
+    setWind(Math,round(response.data.wind.speed));
+    setTempHigh(Math.round(response.data.main.temp_max));
+    setTempLow(Math.round(response.data.main.temp_min));
+    setFeelsLike(Math.round(response.data.main.feels_like));
   }
   let apiKey = "f98ba7e599adf93cd93e20273e395b25";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
