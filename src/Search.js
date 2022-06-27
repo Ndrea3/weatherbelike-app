@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Search() {
+export default function WeatherSearch() {
   let [city, setCity] = useState("");
+  let [details, setDetails] = useState({});
   let [display, setDisplay] = useState(false);
 
   function displayWeather(response) {
     console.log(response);
     setDisplay(true);
+    setDetails({
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+    });
   }
 
   function showSubmit(event) {
@@ -16,35 +24,41 @@ export default function Search() {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(displayWeather);
   }
+
   function updateCity(event) {
     setCity(event.target.value);
   }
   let form = (
-    <div className="weather-app">
-      <form id="search-form" onSubmit={showSubmit}>
-        <div className="row">
-          <div className="col-9">
+    <form onSubmit={showSubmit}>
       <input
-        className="form-control"
-        id="city-input"
         type="search"
         placeholder="Enter a city..."
-        autoComplete="off"
         onChange={updateCity}
       />
-      <div className="col-3">
-      <input type="submit" value="Search" className="btn btn-info w-100" onClick={showSubmit} />
-    </div>
-    </div>
-    </div>
+      <input type="submit" value="Search" onClick={showSubmit} />
     </form>
-    </div>
   );
 
   if (display) {
     return (
       <div>
         {form}
+        <h2>{city}</h2>
+        <img src={details.icon} alt={details.description} />
+        <ul className="Details">
+          <li>
+            <strong>Temp</strong>: {Math.round(details.temperature)}°C
+          </li>
+          <li>
+            <strong>Description</strong>: {details.description}
+          </li>
+          <li>
+            <strong>Humidity</strong>: {details.humidity}%
+          </li>
+          <li>
+            <strong>Wind</strong>: {details.wind}km/h
+          </li>
+        </ul>
       </div>
     );
   } else {

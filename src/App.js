@@ -28,7 +28,7 @@ export default function App() {
       <br/>
       <DateTime />
       <br />
-      <CurrentWeather />
+      <CurrentWeather  city="Quinte West"/>
       <Forecast />
       <Footer />
     </div>
