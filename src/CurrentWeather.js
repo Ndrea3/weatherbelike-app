@@ -22,9 +22,9 @@ export default function Weather(props) {
     );
     setPress(response.data.main.pressure);
     setHum(response.data.main.humidity);
-    setWind(response.data.main.wind.speed);
-    setTempHigh(response.data.main.temp_high);
-    setTempLow(response.data.main.temp_low);
+    setWind(response.data.wind.speed);
+    setTempHigh(response.data.main.temp_max);
+    setTempLow(response.data.main.temp_min);
     setFeelsLike(response.data.main.feels_like);
   }
   let apiKey = "f98ba7e599adf93cd93e20273e395b25";
@@ -34,21 +34,21 @@ export default function Weather(props) {
     return (
       <div className="curWeather">
         <h2 className="place mt-3" id="city">
-          ${city}
+          {city}
         </h2>
         <ul>
           <li className="cur-date" id="date">
             June 6, 2022 @ 10:40 AM
           </li>
           <li className="w-desc" id="desc">
-            ${description}
+            {description}
           </li>
         </ul>
         <div className="row">
           <div className="col-6">
             <div className="clearfix weather-img">
-              <image>${icon}</image>
-              <strong id="temperature">${temp} </strong>
+              <image>{icon}</image>
+              <strong id="temperature">{temp} </strong>
               <small id="celc-link">°C</small>
             </div>
           </div>
@@ -56,30 +56,30 @@ export default function Weather(props) {
             <ul className="w-details">
               <li>
                 <strong>Pressure: </strong>
-                <span id="pressure">${pressure} </span> mmHg
+                <span id="pressure">{pressure} </span> mmHg
               </li>
               <li>
                 <strong>Humidity: </strong>
-                <span id="humidity">${humidity} </span>%
+                <span id="humidity">{humidity} </span>%
               </li>
               <li>
                 <strong>Wind:</strong>
-                <span id="wind">${wind}</span> km/h
+                <span id="wind">{wind}</span> km/h
               </li>
             </ul>
           </div>
           <ul>
             <li className="temp-summary p-3">
               <strong>High: </strong>
-              <span id="dailyHigh">${tempHigh}</span>
+              <span id="dailyHigh">{tempHigh}</span>
             </li>
             <li className="temp-summary p-3">
               <strong>Low: </strong>
-              <span id="dailyLow"> ${tempLow} </span>
+              <span id="dailyLow">{tempLow} </span>
             </li>
             <li className="temp-summary p-3">
               <strong>Feels Like: </strong>
-              <span id="dailyFeelsLike">${feelsLike} </span>
+              <span id="dailyFeelsLike">{feelsLike} </span>
             </li>
           </ul>
         </div>
