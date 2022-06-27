@@ -1,11 +1,10 @@
-import "./App.css";
+import "./styles.css";
 import React from "react";
 import CurrentWeather from "./CurrentWeather";
 import Footer from "./Footer";
 import Forecast from "./Forecast";
 import Search from "./Search";
 import Background from "./Images/coffee-and-donuts-pop-color-background.png";
-import DateTime from "./Date";
 
 export default function App() {
   return (
@@ -23,12 +22,8 @@ export default function App() {
           🤔
         </span>
       </h1>
-      <br />
       <Search />
-      <br/>
-      <DateTime />
-      <br />
-      <CurrentWeather  city="Quinte West"/>
+      <CurrentWeather />
       <Forecast />
       <Footer />
     </div>
