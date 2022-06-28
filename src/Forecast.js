@@ -6,7 +6,7 @@ export default function Forecast() {
       </h4>
       <div className="daily-forecast" id="forecast">
         <div className="row">
-          <div className="daily-weather col-2">
+          <div className="daily-weather col-6">
             <div className="daily-forecast-day">Tues</div>
             <img
               src="http://openweathermap.org/img/wn/10d.png"
