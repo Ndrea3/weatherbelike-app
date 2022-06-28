@@ -17,7 +17,8 @@ export default function Forecast() {
               <span className="daily-forecast-temp-max">16°</span>
               <span className="daily-forecast-temp-min">14°</span>
             </div>
-      
+            </div>
+            <div className="row">
           <div className="daily-weather col-2"></div>
             <div className="daily-forecast-day">Wed</div>
             <img
